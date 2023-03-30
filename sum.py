@@ -1,10 +1,9 @@
-
-#sum of two number that add upto target
-def twoSum(numbers, target):
-    dictt = {}
-    for i in range(len(numbers)):
-        if numbers[i] in dictt:
-            return [dictt[numbers[i]], i]
-        else:
-            dictt[target - numbers[i]] = i
-    return []
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dictt = {}
+        for i in range(len(nums)):
+            if nums[i] in dictt:
+                return [dictt[nums[i]], i]
+            else:
+                dictt[target - nums[i]] = i
+        return []
